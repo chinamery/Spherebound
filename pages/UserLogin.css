@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.box-login {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background-color: #101c24;
+    background-image:
+        linear-gradient(rgba(16, 28, 36, 0.94), rgba(16, 28, 36, 0.94)),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 39px,
+            #29404a 40px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 39px,
+            #29404a 40px
+        );
+    font-family: 'VT323', monospace;
+}
+
+.user-login {
+    width: 100%;
+    max-width: 430px;
+    padding: 45px 35px;
+    background: #1d3038;
+    border: 4px solid #78a58c;
+    box-shadow:
+        8px 8px 0 #0a1319,
+        inset 0 0 0 4px #263f43;
+    color: #e4f1df;
+    text-align: center;
+}
+
+.user-login h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 22px;
+    line-height: 1.7;
+    color: #a8e6a3;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px #365e50;
+}
+
+.user-login p {
+    font-size: 24px;
+    color: #b8cfc2;
+    margin: 12px 0 25px;
+}
+
+.user-login form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+}
+
+.user-login label {
+    font-size: 23px;
+    color: #a8e6a3;
+    margin-top: 8px;
+}
+
+.user-login input {
+    width: 100%;
+    padding: 13px;
+    background: #101e25;
+    border: 3px solid #52786b;
+    outline: none;
+    color: #ffffff;
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+}
+
+.user-login input::placeholder {
+    color: #829c91;
+}
+
+.user-login input:focus {
+    border-color: #a8e6a3;
+}
+
+.password-field {
+    display: flex;
+    align-items: stretch;
+    gap: 6px;
+}
+
+.password-field input {
+    min-width: 0;
+    flex: 1;
+}
+
+.password-toggle {
+    padding: 0 12px;
+    background: #365e50;
+    border: 3px solid #78a58c;
+    color: #ffffff;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.user-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;
+    background: #83bd83;
+    border: 3px solid #b7e6a9;
+    box-shadow: 4px 4px 0 #0a1319;
+    color: #13261e;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.user-btn:hover {
+    background: #a8e6a3;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #0a1319;
+}
+
+.user-login > button {
+    padding: 9px 22px;
+    background: transparent;
+    border: 2px solid #78a58c;
+    color: #a8e6a3;
+    font-family: 'VT323', monospace;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.user-login > button:hover {
+    background: #365e50;
+    color: white;
+}
+
+.password-toggle:hover {
+    background: #52786b;
+}
+
+.error {
+    color: #ff8989 !important;
+    font-size: 21px !important;
+    text-align: left;
+    margin: 5px 0 !important;
+}
+
+@media (max-width: 480px) {
+    .user-login {
+        padding: 35px 22px;
+    }
+
+    .user-login h2 {
+        font-size: 17px;
+    }
+
+    .user-btn {
+        font-size: 10px;
+    }
+}
