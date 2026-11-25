@@ -1,1 +1,47 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discovery Page</title>
+    <link rel="stylesheet" href="discovery.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <button class="menu">☰</button>
+            <h1>Discovery Page</h1>
+        </header>
+
+        <div class="discovery-cards">
+
+            <div class="card">
+                <img src="">
+                <h3>BIOSPHERE</h3>
+                <p>Discover the beauty of nature.</p>
+            </div>
+
+            <div class="card">
+                <img src="">
+                <h3>GEOSPHERE</h3>
+                <p>Explore beautiful landscapes.</p>
+            </div>
+
+            <div class="card">
+                <img src="">
+                <h3>LITHOSPHERE</h3>
+                <p>Discover the Earth's structure.</p>
+            </div>
+        </div>
+
+        <button class="back-btn" onclick="location.href='profile.html'">
+            BACK
+        </button>
+
+    </div>
+
+</body>
+</html>
+
