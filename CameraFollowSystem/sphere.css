@@ -1,0 +1,87 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+#viewport {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#world {
+    display: flex;
+    width: 1000vw;
+    height: 100vh;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.panel {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+
+.photo1 {
+    background-image: url("assets/forest.jpg");
+}
+
+.photo2 {
+    background-image: url("assets/grass.jpg");
+}
+
+.photo3 {
+    background-image: url("assets/wetland.jpg");
+}
+
+.photo4 {
+    background-image: url("assets/sea.jpg");
+}
+
+.photo5 {
+    background-image: url("assets/tundra.jpg");
+}
+
+.left {
+    background-position: left center;
+}
+
+.right {
+    background-position: right center;
+}
+
+#character {
+    position: absolute;
+    width: 100px;
+    height: 140px;
+    object-fit: contain;
+    bottom: 10%;
+    left: 120px;
+    z-index: 5;
+}
+
+#controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+}
+
+#controls button {
+    padding: 15px 30px;
+    font-size: 25px;
+    cursor: pointer;
+}
