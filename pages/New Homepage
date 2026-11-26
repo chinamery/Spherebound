@@ -1,0 +1,68 @@
+import React, { useState } from "react";
+
+function Homepage({ onStart }) {
+  const [selectedSphere, setSelectedSphere] = useState(null);
+  const [isStarting, setIsStarting] = useState(false);
+
+  const spheres = [
+    {
+      name: "Biosphere",
+      image: "sphere-biosphere.png"
+    },
+    {
+      name: "Atmosphere",
+      image: "sphere-atmosphere.png"
+    },
+    {
+      name: "Geosphere",
+      image: "sphere-geosphere.png"
+    },
+    {
+      name: "Hydrosphere",
+      image: "sphere-hydrosphere.png"
+    }
+  ];
+
+  function handleSphereClick(name) {
+    if (isStarting) return;
+
+    setSelectedSphere(name);
+    setIsStarting(true);
+    window.setTimeout(() => onStart(name), 300);
+  }
+
+  return (
+    <div
+      className="homepage"
+      style={{
+        backgroundImage: `url("${process.env.PUBLIC_URL}/assets/homepage.jpg")`
+      }}
+    >
+      <h1>SPHEREBOUND</h1>
+      <p>Explore the Four Spheres of Earth</p>
+
+      <h2>Select Your Starting Sphere</h2>
+
+      <div className="sphere-buttons">
+        {spheres.map(({ name, image }) => (
+          <button
+            key={name}
+            type="button"
+            className={selectedSphere === name ? "selected" : ""}
+            aria-pressed={selectedSphere === name}
+            disabled={isStarting}
+            onClick={() => handleSphereClick(name)}
+          >
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/${image}`}
+              alt=""
+            />
+            <span>{name}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default Homepage;
