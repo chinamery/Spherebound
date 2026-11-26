@@ -1,0 +1,17 @@
+import React from "react";
+
+function CharacterController({ position }) {
+  return (
+    <div
+      className="character"
+      style={{ left: `${position}%` }}
+    >
+      <img
+        src={`${process.env.PUBLIC_URL}/assets/character.png`}
+        alt="Player character"
+      />
+    </div>
+  );
+}
+
+export default CharacterController;
